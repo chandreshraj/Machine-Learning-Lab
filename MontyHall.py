@@ -64,7 +64,7 @@ def main():
     parser.add_argument('--steps', default=False, action='store_true',help='display the results of each trial')
 	
     args = parser.parse_args()
-	print('Simulating {} trials...'.format(args.trials))
+    print('Simulating {} trials...'.format(args.trials))
     # Carry out the trials
     winning_non_switchers = 0
     winning_switchers = 0
@@ -78,8 +78,8 @@ def main():
         won = simulate(args.doors, switch=True, steps=args.steps)
         if won:
             winning_switchers += 1
-			print('Switching won {0:5} times out of {1} ({2}% of the time)'.format(winning_switchers, args.trials,(winning_switchers / args.trials * 100 ) ))
-			print('Not switching won {0:5} times out of {1} ({2}% of the time)'.format(winning_non_switchers, args.trials,(winning_non_switchers / args.trials * 100 ) ))
+            print('Switching won {0:5} times out of {1} ({2}% of the time)'.format(winning_switchers, args.trials,(winning_switchers / args.trials * 100 ) ))
+            print('Not switching won {0:5} times out of {1} ({2}% of the time)'.format(winning_non_switchers, args.trials,(winning_non_switchers / args.trials * 100 ) ))
 
 if __name__ == '__main__':
 
